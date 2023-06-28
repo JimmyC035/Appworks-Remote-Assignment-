@@ -1,0 +1,31 @@
+Q1
+a.valid=9527  //correct 
+
+b. var number : Int = 5.6  /* incorrect. 5.6 is a floating number or a double. Delete the type Int and add f after 5.6 or delete the type Int to make it a double.*/
+
+c. var title = "Hello Kotlin!" //correct
+
+d. val content : String = null /* incorrect. type String can't be null. Add a ? after String to make it nullable */ 
+
+e. val number : Double? = 556.6 /* correct but val can't be re-assign that makes the number never be null. So that the ? is redundent */ 
+
+f. var list: List<String>? = listOf(null, null) /* incorrect. The list can be null but the String inside the list can not. Add a ? After the String to fix it. */
+
+g. var list: List<String?>? = listOf("Wayne", "Chen")  // correct
+
+h. list.size /* incorrect. Base on the list we just create, the list could be null. */
+
+i. list?.size /* correct the ? check wether to call size */
+-----------------------------------------------------------------
+Q2
+
+Ans: C
+The String contain 39 characters.
+The when cases go to the range 1 to 39 than print  "Your grace"
+----------------------------------------------------------------
+Q3
+
+Ans: D
+Inside the for loop statement for ((i, value) in array.withIndex()), we iterate over all the elements in the array using their corresponding indices. Since the units array has six elements, we need to initialize the array with a size of 6.
+
+The output shows that each number of bytes is calculated as a power of 1000. To achieve this, we use the lambda expression {1000.0.pow(it)}, where it represents the index of the array. We apply the pow() function, which expects a Double value, so we append .0 to 1000 to ensure it is treated as a Double.
