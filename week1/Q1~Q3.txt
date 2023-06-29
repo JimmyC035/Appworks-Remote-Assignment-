@@ -7,7 +7,7 @@ c. var title = "Hello Kotlin!" //correct
 
 d. val content : String = null /* incorrect. type String can't be null. Add a ? after String to make it nullable */ 
 
-e. val number : Double? = 556.6 /* correct but val can't be re-assign that makes the number never be null. So that the ? is redundent */ 
+e. val number : Double? = 556.6 /* correct but val can't be re-assign that makes the number never be null. So that the ? is redundant */ 
 
 f. var list: List<String>? = listOf(null, null) /* incorrect. The list can be null but the String inside the list can not. Add a ? After the String to fix it. */
 
