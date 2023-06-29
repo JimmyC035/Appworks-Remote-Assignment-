@@ -10,7 +10,7 @@ class Mage(name: String,mana: Boolean) : Human(name,mana){
         if(mana){
             println("$name use Fireball!")
             mana = false
-        }else{ //no mana use fist attack instend
+        }else{ //no mana use fist attack instead
             println("Run out of Mana :(")
             super.attack()
         }
