@@ -1,15 +1,15 @@
-open class Human(val name :String, var mana :Boolean = true){
+open class Human(val name :String, var mana :Int = 0){
 
-   open fun attack(){
+    open fun attack(){
         println("$name use Fist Attack!")
     }
 }
-class Mage(name: String,mana: Boolean) : Human(name,mana){
+class Mage(name: String,mana: Int) : Human(name,mana){
 
     override fun attack() {
-        if(mana){
+        if(mana != 0){
             println("$name use Fireball!")
-            mana = false
+            mana = 0
         }else{ //no mana use fist attack instead
             println("Run out of Mana :(")
             super.attack()
@@ -20,8 +20,8 @@ class Mage(name: String,mana: Boolean) : Human(name,mana){
 fun main() {
     val human = Human("human") // a Human name human
     human.attack() // fist attack don't require Mana
-    
-    val gandalf = Mage("Gandalf",true) //  a Mage name gandalf
+
+    val gandalf = Mage("Gandalf",100) //  a Mage name gandalf
     gandalf.attack() // cast spell
     gandalf.attack() // run out of Mana
     gandalf.attack() // still no Mana
