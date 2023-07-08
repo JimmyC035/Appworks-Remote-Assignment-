@@ -20,12 +20,25 @@ split()返回一個List<String>型態
 -------------------------------------------------------------------------
 Q3 What kind of key-value pair collection do we use in Android? Attach a sample code that uses for-loop to print each key-value pair.
 
+在Android中，Bundle是一種資料結構可以利用key取得存入的value，primitive type或其他資料結構如Arraylist可以存在Bundle裡。
 
+val bundle = Bundle()
+bundle.putString("name", "John") // put存入資料
+bundle.putInt("age", 25)
+bundle.putInt("age1", 35)
+bundle.putInt("age2", 45)
+bundle.putInt("age3", 55)
+bundle.putInt("age4", 65)
+bundle.putInt("age5", 75)
+bundle.putBoolean("isStudent", true)
+val stringBuilder = StringBuilder()
 
-
-
-
-
+    for (key in bundle.keySet()) {
+        if (key.startsWith("age")) {
+            val age = bundle.getInt(key)
+            stringBuilder.append("$key: $age\n")
+        }
+    }
 -------------------------------------------------------------------------
 Q4 What’s the difference between ArrayList and LinkedList? Try to explain in Mandarin.
 
