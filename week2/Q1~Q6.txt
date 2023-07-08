@@ -1,0 +1,48 @@
+Q1:What is Inheritance? Try to explain in Mandarin.
+
+:Inheritance 中文為繼承，是物件導向程式設計的特性之一。繼承可以讓子類可以使用父類的屬性和方法，也可以重寫父類的方法或屬性來拓展用途。這樣的的做法可以減少重複的程式碼，也可以提高程式的可讀性和可維護性。
+-------------------------------------------------------------------------
+Q2:How to split a string in Android? Explain your understanding, and even better to attach some sample code.
+
+可以使用split()函數來分割String。
+以下是split()原型
+public fun CharSequence.split(vararg delimiters: String, ignoreCase: Boolean = false, limit: Int = 0): List<String> 
+//函數中聲明split可以接受多個 String 型態的分割符號或字串。ignoreCase為是否忽略大小寫，預設為false表示區分大小寫，limit指定分割的String最大數量，預設為0表示沒有限制。
+Ex:
+    val email = "splittheemail@gmail.com"
+    val delim = "@"
+
+    val list = email.split(delim)
+
+    println(list)    // [splittheemail, gmail.com]
+
+split()返回一個List<String>型態
+-------------------------------------------------------------------------
+Q3 What kind of key-value pair collection do we use in Android? Attach a sample code that uses for-loop to print each key-value pair.
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+Q4 What’s the difference between ArrayList and LinkedList? Try to explain in Mandarin.
+
+ArrayList 是一種動態陣列，可以改動陣列的大小，也可以利用index取用內容、刪除、改寫和查找內容。
+
+Linked list是另一種資料結構，由一個值和指向下一個節點位置構成（在kotlin中還有一個指向前一個節點的位置），linked list沒辦法直接用索引取用節點內容，必須一個一個往下看。好處在於刪除節點或插入節點時非常快且簡單
+-------------------------------------------------------------------------
+Q5 What are Value Type variables? List out the Value Type variables you know.
+
+Value Type 指稱資料存在本身的一種變數、固定大小、做為參數的時候直接傳遞值，例如 Boolean, Int, Double, Float, Long, Short, Byte, Char。當做為參數傳遞時會複製一份給參數使用並不會修改本身資料。
+
+String, class則是一種引用資料型態(reference Type Variables)。用C語言的理解大概是當String 傳入函數時實際上是傳入開頭的指標地址來取用。
+-------------------------------------------------------------------------
+Q6 What’s the maximum value of Int? If you want to represent integers larger than the limit, what should you do instead of using int variables?
+
+Int 的大小為32 bits 最大為2,147,483,647 (2＾31 - 1)
+可以用Long增加到64位元。真的非常大的數字可以用String儲存，需使用在做運算。
+
+
+
