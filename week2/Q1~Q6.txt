@@ -51,6 +51,13 @@ Q5 What are Value Type variables? List out the Value Type variables you know.
 Value Type 指稱資料存在本身的一種變數、固定大小、做為參數的時候直接傳遞值，例如 Boolean, Int, Double, Float, Long, Short, Byte, Char。當做為參數傳遞時會複製一份給參數使用並不會修改本身資料。
 
 String, class則是一種引用資料型態(reference Type Variables)。用C語言的理解大概是當String 傳入函數時實際上是傳入開頭的指標地址來取用。
+# 根據老師給範例code fun addOne(integer: Int) {
+    integer += 1 // compile failed
+}這樣會造成error是因為傳入函數的參數為val型態不可以被更改，fun addOne(arr: Array<Int>) {
+    for (i in arr.indices) {
+    arr[i] += 1
+    }
+}但這樣卻是可以正確執行的，表示array 是一個reference type value。
 -------------------------------------------------------------------------
 Q6 What’s the maximum value of Int? If you want to represent integers larger than the limit, what should you do instead of using int variables?
 
