@@ -1,0 +1,46 @@
+Q1:. What is Encapsulation? Try to list out the benefits of Encapsulation.
+Encapsulation 中文為封裝，是物件導向程式設計的一種觀念，這種概念是將一個資料的屬性或者方法包裝成一個單位，並且可以選擇對外公開和對外隱藏的部分。這樣做的好處有
+1.讓程式更好維護
+2.隱藏物件和方法可以讓使用者不要不小心破壞掉內部的函數
+3.可以減少程式碼重複，無需重新做同樣功能的程式碼
+4.在一個函數中如果要重複呼叫多次同一個函數可以把它做成一個封裝並賦值給一個變數來減少重複運算
+---------------------------------------------------------------------
+Q2:Try to explain what enum is and why we use them.
+Enum 中文稱為列舉，是一種資料型態。可以拿來表示一組有限的狀態，例如紅綠燈。可以在when中作為傳值使用。利用.values可以獲得enum的索引常數值並且作為index呼叫內容。
+利用enum也可以增加程式碼的可讀性。
+---------------------------------------------------------------------
+Q3:How to use enum in Kotlin? Attach a sample code that uses enum in Kotlin.
+enum class trafficLight {
+    RED, GREEN, BLUE
+}
+
+fun main() {
+    val lightState = trafficLight.values() // get index using int
+    val light = trafficLight.RED 
+	when(light){ // when expression
+        trafficLight.RED -> println("its red, STOP")
+        trafficLight.GREEN -> println("good to go")
+        trafficLight.BLUE -> println("be caution")
+    }
+	
+    val thirdLight = lightState[2] // get value by index
+    println(thirdLight)
+}
+---------------------------------------------------------------------
+Q4: What are the differences between LinearLayout and RelativeLayout? Try to explain in detail.
+
+LinearLayout 線性佈局： 線性佈局以線性的方式作為佈局模式可以利用水平或者垂直將元素排列。位置由他們在layout中的順序決定。可以用weight把空間切分並分配大小
+
+RelativeLayout 相對佈局：可以利用元素的ID到指定的位置如android:layout_above="@+id/物件id名稱"：代表在id物件名稱的上方。還有很多屬性如alignParentTop、alignTop、alignLeft 等方式作為佈局方法。
+
+最大的不同在於，Relative在佈局文件中不因為順序影響而LinearLayout會被順序影響
+---------------------------------------------------------------------
+Q5: Try to explain the benefits of ConstraintLayout. Why should you use it?
+
+ConstrainLayout 可以設定每一個元素的相對關係，ConstrainLayout利用constrain限制出正確的長寬和位置，或者用百分比來設置各元素大小，在旋轉畫面時因為用約束和比例來設定位置可以確保相對位置不變。可以定義出更複雜自在度更高的設計而不會造成需要nest 各種不同的layout來達成效果從而提高渲染效率。
+
+
+
+
+
+
