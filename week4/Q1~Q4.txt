@@ -1,0 +1,23 @@
+1. What is Polymorphism? Try to explain in Mandarin.
+
+Polymorphism 中文稱多型性，這個方法可以讓程式使用同一個interface 或者方法來處理不同類型的對象，能夠讓程式更靈活。利用override可以讓繼承的object使用不同方法。
+---------------------------------------------------------------------
+2. Here are 7 important lifecycle methods of an Activity: onCreate()
+onStart() onResume() onPause() onStop() onDestroy()Try to explain when they are called during the lifecycle of Activity.
+onCreate()只有在程式的第一次創立的時候會呼叫。
+onStart()在activity即將在使用者可見的時候呼叫，這時候使用者還不能跟app互動。
+onResume()在app進入前台被用戶看見時呼叫，且用戶可以跟app互動。
+onPause()當app即將停止（暫停）時呼叫。
+onStop()當app完全不可被使用者看見時呼叫。
+onDestroy()app完全關閉時呼叫。
+---------------------------------------------------------------------
+3. What is the Android Jetpack?
+是一個包含一系列函式庫的組合，可以幫助開發者專注在開發app而不用在意底層程式碼的細節。
+---------------------------------------------------------------------
+4.What is Coroutines? Why do we use it? Try to explain in Mandarin.
+Coroutines中文稱共常式，是一種協同運作多工模式，允許函數執行到一半時暫停和恢復，能切換目前的thread和process這樣能幫助程式執行得更順暢。以避免前面的程式需要等待時間太長。
+---------------------------------------------------------------------
+
+
+
+
