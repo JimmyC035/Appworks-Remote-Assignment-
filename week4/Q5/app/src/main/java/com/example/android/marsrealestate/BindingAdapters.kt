@@ -2,8 +2,11 @@
 
 package com.example.android.marsrealestate
 
+import android.content.Context
+import android.provider.Settings.Global.getString
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView

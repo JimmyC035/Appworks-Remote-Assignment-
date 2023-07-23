@@ -17,6 +17,7 @@
 
 package com.example.android.marsrealestate.network
 
+import android.content.Context
 import android.os.Parcelable
 import android.provider.Settings.Global.getString
 import android.renderscript.Type
@@ -34,5 +35,6 @@ data class MarsProperty(
 ): Parcelable{
     val isRental
         get() = type == "rent"
+
 }
 
